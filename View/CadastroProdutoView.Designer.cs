@@ -95,6 +95,7 @@
             this.buttonCadastrar.TabIndex = 6;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonPesquisar
             // 

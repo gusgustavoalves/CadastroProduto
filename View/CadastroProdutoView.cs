@@ -21,5 +21,10 @@ namespace CadastroProduto.View
         {
 
         }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
