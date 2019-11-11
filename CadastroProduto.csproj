@@ -98,6 +98,12 @@
     <Compile Include="View\CadastroProdutoView.Designer.cs">
       <DependentUpon>CadastroProdutoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ExcluirProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ExcluirProduto.Designer.cs">
+      <DependentUpon>ExcluirProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PesquisarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="View\CadastroProdutoView.resx">
       <DependentUpon>CadastroProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ExcluirProduto.resx">
+      <DependentUpon>ExcluirProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PesquisarProduto.resx">
       <DependentUpon>PesquisarProduto.cs</DependentUpon>

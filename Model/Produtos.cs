@@ -8,36 +8,53 @@ namespace CadastroProduto.Model
 {
     public class Produtos
     {
-        private string descricao;
+        private String descricao;
         private int quant;
         private float valor;
 
-        public void SetDescricao( string descricao)
+        public void setDescricao( String descricao)
         {
             this.descricao = descricao;
         }
 
-        public string GetDescricao()
+        public String getDescricao()
         {
             return this.descricao;
         }
 
-        public void SetQuant(int quant)
+        public bool setQuant(int quant)
         {
-            this.quant = quant;
+            if (quant > 0)
+            {
+                this.quant = quant;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
-        public int GetQuant()
+        public int getQuant()
         {
             return this.quant;
         }
 
-        public void SetValor(float valor)
+        public bool setValor(float valor)
         {
+            if (valor > 0) 
+            { 
             this.valor = valor;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        public float GetValor()
+        public float getValor()
         {
             return this.valor;
         }

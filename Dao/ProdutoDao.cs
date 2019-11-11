@@ -13,12 +13,10 @@ namespace CadastroProduto.Dao
     public class ProdutoDao
     {
         Dao.Conexao Con = new Dao.Conexao();
-        public void CadastraProduto()
+        public bool CadastraProduto(Model.Produtos pro)
         {
-            Model.Produtos pro = new Model.Produtos();
-            
-            MessageBox.Show(Convert.ToString(pro.GetQuant()));
-            MessageBox.Show(Convert.ToString(pro.GetValor()));
+           
+         
             if (!Con.Checkconection())
             {
                 Con.Conectar();
@@ -29,12 +27,17 @@ namespace CadastroProduto.Dao
                 DataTable table = new DataTable();
                 MySqlDataAdapter adapter = new MySqlDataAdapter();
                 MySqlCommand command = new MySqlCommand("INSERT INTO produto (descricao, quantidade, valor) VALUES (@desc, @quant, @val)", Con.Traz_Conexao());
-                command.Parameters.Add("@desc", MySqlDbType.VarChar, 45).Value = pro.GetDescricao();
-                command.Parameters.Add("@quant", MySqlDbType.Int32, 11).Value = pro.GetQuant();
-                command.Parameters.Add("@val", MySqlDbType.Float).Value = pro.GetValor();
+                command.Parameters.Add("@desc", MySqlDbType.VarChar, 45).Value = pro.getDescricao();
+                command.Parameters.Add("@quant", MySqlDbType.Int32, 11).Value = pro.getQuant();
+                command.Parameters.Add("@val", MySqlDbType.Float).Value = pro.getValor();
                 command.ExecuteNonQuery();
 
                 Con.Desconectar();
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }

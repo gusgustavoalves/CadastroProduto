@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CadastroProduto.View
 {
-    public partial class PesquisarProduto : Form
+    public partial class ExcluirProduto : Form
     {
-        public PesquisarProduto()
+        public ExcluirProduto()
         {
             InitializeComponent();
-        }
-
-        private void buttonPesquisar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

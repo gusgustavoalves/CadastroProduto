@@ -24,16 +24,30 @@ namespace CadastroProduto.View
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
+            string desc, valtemp;
+            int quant;
+            float val;
+
             Control.ProdutosC cpro = new Control.ProdutosC();
             Model.Produtos pro = new Model.Produtos();
-            Dao.ProdutoDao dao = new Dao.ProdutoDao();
 
+            
             if (txtDescricao.Text != "" && txtQuantidade.Text != "" && txtValorUnitario.Text != "")
             {
-                pro.SetDescricao(Convert.ToString(txtDescricao.Text));
-                pro.SetQuant(Convert.ToInt32(txtQuantidade.Text));
-                pro.SetValor(float.Parse(txtValorUnitario.Text));                
-                dao.CadastraProduto();
+                desc = txtDescricao.Text;
+                quant = Convert.ToInt32(txtQuantidade.Text);
+                valtemp = txtValorUnitario.Text;
+                valtemp = valtemp.Replace(".", ",");
+                val = float.Parse(valtemp);
+                if (cpro.CadastraProduto(desc, quant, val))
+                {
+                    MessageBox.Show("Produto cadastrado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("O produto na foi Cadastrado Revise os dados");
+                }
+               
             }
             else
             {
@@ -43,6 +57,14 @@ namespace CadastroProduto.View
 
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
+            PesquisarProduto pes = new PesquisarProduto();
+            pes.Show();
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            ExcluirProduto exc = new ExcluirProduto();
+            exc.Show();
 
         }
     }
