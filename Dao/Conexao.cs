@@ -56,20 +56,6 @@ namespace CadastroProduto.Dao
             }
         }
 
-        public void Testeconection()
-        {
-            try
-            {
-                conexao.ConnectionString = @"server = 187.32.22.185; port = 6661; User Id = root; database = pim; password = 010101ADS";
-                conexao.Open();
-                MessageBox.Show("Conectado com Sucesso !!!");
-                conexao.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Erro de Conexao Com O Banco de Dados !!!!");
-            }
-        }
         public MySqlConnection Traz_Conexao()
         {
             return conexao;

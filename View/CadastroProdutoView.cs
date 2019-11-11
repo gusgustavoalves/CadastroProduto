@@ -24,6 +24,25 @@ namespace CadastroProduto.View
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
+            Control.ProdutosC cpro = new Control.ProdutosC();
+            Model.Produtos pro = new Model.Produtos();
+            Dao.ProdutoDao dao = new Dao.ProdutoDao();
+
+            if (txtDescricao.Text != "" && txtQuantidade.Text != "" && txtValorUnitario.Text != "")
+            {
+                pro.SetDescricao(txtDescricao.Text);
+                pro.SetQuant(Convert.ToInt32(txtQuantidade.Text));
+                pro.SetValor(float.Parse(txtValorUnitario.Text));                
+                dao.CadastraProduto();
+            }
+            else
+            {
+                MessageBox.Show("Campos não podem ser vazios");
+            }
+        }
+
+        private void buttonPesquisar_Click(object sender, EventArgs e)
+        {
 
         }
     }

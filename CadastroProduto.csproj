@@ -33,17 +33,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Debugger">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Debugger.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Debugger.VisualStudio">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Debugger.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Parser">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.VisualStudio">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\MySql.Web.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
-      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <HintPath>Framework\mysql-for-visualstudio-1.2.9-noinstall\16.0v472\Renci.SshNet.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
@@ -67,6 +88,7 @@
   <ItemGroup>
     <Compile Include="Control\ProdutosC.cs" />
     <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Dao\ProdutoDao.cs" />
     <Compile Include="Model\Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
