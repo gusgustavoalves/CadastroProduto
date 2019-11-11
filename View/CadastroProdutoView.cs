@@ -30,7 +30,7 @@ namespace CadastroProduto.View
 
             if (txtDescricao.Text != "" && txtQuantidade.Text != "" && txtValorUnitario.Text != "")
             {
-                pro.SetDescricao(txtDescricao.Text);
+                pro.SetDescricao(Convert.ToString(txtDescricao.Text));
                 pro.SetQuant(Convert.ToInt32(txtQuantidade.Text));
                 pro.SetValor(float.Parse(txtValorUnitario.Text));                
                 dao.CadastraProduto();

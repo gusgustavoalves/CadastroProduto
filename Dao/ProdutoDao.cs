@@ -16,7 +16,9 @@ namespace CadastroProduto.Dao
         public void CadastraProduto()
         {
             Model.Produtos pro = new Model.Produtos();
-            MessageBox.Show(pro.GetDescricao());
+            
+            MessageBox.Show(Convert.ToString(pro.GetQuant()));
+            MessageBox.Show(Convert.ToString(pro.GetValor()));
             if (!Con.Checkconection())
             {
                 Con.Conectar();
