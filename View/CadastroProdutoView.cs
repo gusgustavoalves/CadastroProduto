@@ -29,8 +29,6 @@ namespace CadastroProduto.View
             float val;
 
             Control.ProdutosC cpro = new Control.ProdutosC();
-            Model.Produtos pro = new Model.Produtos();
-
             
             if (txtDescricao.Text != "" && txtQuantidade.Text != "" && txtValorUnitario.Text != "")
             {

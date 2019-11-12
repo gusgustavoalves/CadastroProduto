@@ -9,7 +9,7 @@ namespace CadastroProduto.Model
     public class Produtos
     {
         private String descricao;
-        private int quant;
+        private int quant, id;
         private float valor;
 
         public void setDescricao( String descricao)
@@ -59,5 +59,14 @@ namespace CadastroProduto.Model
             return this.valor;
         }
 
+        public void setId(int id)
+        {
+            this.id = id;
+        }
+
+        public int getId()
+        {
+            return this.id;
+        }
     }
 }

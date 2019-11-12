@@ -16,5 +16,28 @@ namespace CadastroProduto.View
         {
             InitializeComponent();
         }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            Control.ProdutosC cpro = new Control.ProdutosC();
+            int id;
+            id = Convert.ToInt32(txtID.Text);
+
+            if (txtID.Text != "")
+            {
+                if (cpro.ExcluirProduto(id))
+                {
+                    MessageBox.Show("Produto Excluido !!");
+                }
+                else
+                {
+                    MessageBox.Show("Nao Foi Possivel Excluir o Produto !!!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campo ID não pode ser vazio");
+            }
+        }
     }
 }
